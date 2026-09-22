@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 
 type Action = {
@@ -43,14 +40,9 @@ const ACTIONS: Action[] = [
 ];
 
 export default function FloatingActions() {
-  const pathname = usePathname();
-  const visible = ACTIONS.filter((action) => action.href !== pathname);
-
-  if (visible.length === 0) return null;
-
   return (
     <div className="fixed right-6 bottom-6 z-50 flex flex-col items-end gap-3">
-      {visible.map((action) => (
+      {ACTIONS.map((action) => (
         <Link
           key={action.href}
           href={action.href}
