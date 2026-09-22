@@ -26,6 +26,21 @@ export async function getFeaturedProducts(): Promise<Product[]> {
   return data ?? [];
 }
 
+// 부위별 대표 사진 한 장씩 (상품 목록에서 골라오므로 카탈로그와 항상 일치합니다)
+export async function getCategoryCovers(): Promise<Record<string, string>> {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("shop_products")
+    .select("category, image_url")
+    .order("created_at", { ascending: true });
+
+  const covers: Record<string, string> = {};
+  for (const row of data ?? []) {
+    if (row.image_url && !covers[row.category]) covers[row.category] = row.image_url;
+  }
+  return covers;
+}
+
 export async function getProduct(id: string): Promise<Product | null> {
   const supabase = await createClient();
   const { data } = await supabase.from("shop_products").select("*").eq("id", id).maybeSingle();

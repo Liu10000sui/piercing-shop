@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Noto_Sans_KR } from "next/font/google";
+import { Geist_Mono, Noto_Sans_KR, Noto_Serif_KR } from "next/font/google";
 import Header from "@/components/Header";
 import StoreFinderButton from "@/components/StoreFinderButton";
 import "./globals.css";
@@ -8,6 +8,13 @@ const notoSansKr = Noto_Sans_KR({
   variable: "--font-noto-kr",
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
+});
+
+// 제목에 쓰는 명조 계열. 주얼리 브랜드 특유의 단정한 인상을 줍니다.
+const notoSerifKr = Noto_Serif_KR({
+  variable: "--font-noto-serif",
+  subsets: ["latin"],
+  weight: ["300", "500", "700"],
 });
 
 const geistMono = Geist_Mono({
@@ -24,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="ko"
-      className={`${notoSansKr.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${notoSansKr.variable} ${notoSerifKr.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-ink text-foreground">
         <Header />
