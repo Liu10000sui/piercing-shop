@@ -32,8 +32,8 @@ npm run dev
 
 | 환경변수 | 설명 |
 | --- | --- |
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase 프로젝트 주소 |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | 브라우저에서 쓰는 공개 키 |
+| `SUPABASE_URL` | Supabase 프로젝트 주소 |
+| `SUPABASE_ANON_KEY` | 일반 조회용 공개 키 (RLS 규칙이 적용됨) |
 | `SUPABASE_SERVICE_ROLE_KEY` | **서버 전용** 관리자 키 (주문 저장·결제 완료 처리용) |
 | `NEXT_PUBLIC_TOSS_CLIENT_KEY` | 토스 결제위젯 클라이언트 키 |
 | `TOSS_SECRET_KEY` | **서버 전용** 토스 시크릿 키 |
