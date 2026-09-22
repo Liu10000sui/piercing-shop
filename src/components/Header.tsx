@@ -37,6 +37,12 @@ export default async function Header() {
             상품
           </Link>
           <Link
+            href="/stores"
+            className="hidden rounded-full px-3 py-2 text-silver transition hover:bg-panel-2 hover:text-silver-bright sm:block"
+          >
+            오프라인샵
+          </Link>
+          <Link
             href="/cart"
             className="relative rounded-full px-3 py-2 text-silver transition hover:bg-panel-2 hover:text-silver-bright"
           >
