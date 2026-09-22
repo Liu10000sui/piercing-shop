@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Noto_Sans_KR } from "next/font/google";
 import Header from "@/components/Header";
+import StoreFinder from "@/components/StoreFinder";
 import "./globals.css";
 
 const notoSansKr = Noto_Sans_KR({
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-ink text-foreground">
         <Header />
         <main className="flex-1">{children}</main>
+        <StoreFinder />
         <footer className="border-t border-line mt-24">
           <div className="mx-auto max-w-6xl px-5 py-10 text-sm text-silver-dim">
             <p className="text-chrome text-base font-medium">PIERCING &amp; CO 피어싱앤코</p>
