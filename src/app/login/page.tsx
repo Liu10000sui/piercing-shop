@@ -16,12 +16,19 @@ export default async function LoginPage({ searchParams }: PageProps<"/login">) {
 
         <AuthForm action={signIn} submitLabel="로그인" next={nextPath} />
 
-        <p className="mt-5 text-center">
+        <p className="mt-5 flex items-center justify-center gap-3 text-sm text-silver-dim">
           <Link
             href="/forgot-password"
-            className="text-sm text-silver-dim underline underline-offset-4 transition hover:text-silver"
+            className="underline underline-offset-4 transition hover:text-silver"
           >
             비밀번호를 잊으셨나요?
+          </Link>
+          <span aria-hidden="true" className="text-silver-dim/50">·</span>
+          <Link
+            href="/update-password"
+            className="underline underline-offset-4 transition hover:text-silver"
+          >
+            비밀번호 변경
           </Link>
         </p>
 

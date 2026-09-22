@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Noto_Sans_KR, Noto_Serif_KR } from "next/font/google";
-import Link from "next/link";
 import Header from "@/components/Header";
 import FloatingActions from "@/components/FloatingActions";
 import "./globals.css";
@@ -42,12 +41,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div className="mx-auto max-w-6xl px-5 py-10 text-sm text-silver-dim">
             <p className="text-chrome text-base font-medium">PIERCING &amp; CO 피어싱앤코</p>
             <p className="mt-2">피어싱 전문 스토어 · 서지컬스틸 / 티타늄 / 14K</p>
-            <Link
-              href="/update-password"
-              className="mt-4 inline-block underline underline-offset-4 transition hover:text-silver"
-            >
-              비밀번호 변경
-            </Link>
             <p className="mt-4 text-xs">
               연습용으로 만든 사이트입니다. 결제는 토스페이먼츠 테스트 모드로 동작하며 실제로
               결제되지 않습니다.
