@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* 피어싱앤코 - 블랙 & 실버 메탈릭 테마 */
+:root {
+  --background: #08080a;
+  --foreground: #e9eaee;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* 검정 계열 */
+  --color-ink: #08080a;
+  --color-panel: #111114;
+  --color-panel-2: #17171c;
+  --color-line: #27272e;
+
+  /* 은빛 계열 */
+  --color-silver: #d6d9e0;
+  --color-silver-dim: #8b8e98;
+  --color-silver-bright: #f4f5f8;
+
+  --font-sans: var(--font-noto-kr);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-noto-kr), system-ui, sans-serif;
+}
+
+/* 은빛 그라데이션 글자 (로고, 강조 제목) */
+.text-chrome {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #b9bdc7 28%,
+    #6f727c 48%,
+    #e7e9ef 72%,
+    #9aa0ac 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 은빛 테두리 버튼/카드에 쓰는 미묘한 광택 */
+.chrome-border {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--color-panel), var(--color-panel)) padding-box,
+    linear-gradient(135deg, #4a4d57, #1c1d22 40%, #6b6f7a 75%, #232429) border-box;
+}
+
+.chrome-button {
+  background: linear-gradient(135deg, #f2f3f6 0%, #c3c6cf 45%, #e9ebf0 100%);
+  color: #0b0b0d;
+}
+.chrome-button:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #d4d7de 45%, #f6f7fa 100%);
+}
+.chrome-button:disabled {
+  background: #3a3b42;
+  color: #8b8e98;
+  cursor: not-allowed;
+}
+
+/* 은은하게 도는 배경 광원 */
+.glow-top {
+  background:
+    radial-gradient(60% 45% at 50% -10%, rgba(180, 190, 215, 0.16), transparent 70%),
+    radial-gradient(40% 30% at 85% 10%, rgba(120, 130, 160, 0.1), transparent 70%);
+}

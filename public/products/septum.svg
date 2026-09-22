@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="셉텀 서클 바벨 피어싱">
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="24%" stop-color="#c8ccd6"/>
+      <stop offset="50%" stop-color="#6e717b"/>
+      <stop offset="74%" stop-color="#eef0f5"/>
+      <stop offset="100%" stop-color="#8d929d"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="50%" cy="36%" r="68%">
+      <stop offset="0%" stop-color="#1d1f26"/>
+      <stop offset="100%" stop-color="#0a0a0d"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <path d="M212 188 A130 130 0 1 0 388 188" fill="none" stroke="url(#silver)" stroke-width="30" stroke-linecap="round"/>
+  <circle cx="212" cy="188" r="46" fill="url(#silver)"/>
+  <circle cx="388" cy="188" r="46" fill="url(#silver)"/>
+  <circle cx="198" cy="172" r="13" fill="#ffffff" fill-opacity="0.55"/>
+  <circle cx="374" cy="172" r="13" fill="#ffffff" fill-opacity="0.55"/>
+</svg>
