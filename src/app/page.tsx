@@ -144,6 +144,30 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── 성향 테스트 ── */}
+      <section className="border-y border-line bg-panel/40">
+        <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-5 py-16 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-[11px] tracking-[0.45em] text-silver-dim uppercase">
+              Type test
+            </p>
+            <h2 className="text-chrome font-display mt-4 text-2xl leading-snug font-light sm:text-3xl">
+              나에게 어울리는 피어싱은 어디일까?
+            </h2>
+            <p className="mt-3 text-sm text-silver-dim">
+              6개의 질문이면 충분합니다. 부위와 어울리는 제품까지 골라드려요.
+            </p>
+          </div>
+
+          <Link
+            href="/quiz"
+            className="shrink-0 rounded-full border border-line px-8 py-3.5 text-sm text-silver transition hover:border-silver-dim hover:text-silver-bright"
+          >
+            1분 테스트 하기
+          </Link>
+        </div>
+      </section>
+
       {/* ── 추천 상품 ── */}
       <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-5 py-24">
